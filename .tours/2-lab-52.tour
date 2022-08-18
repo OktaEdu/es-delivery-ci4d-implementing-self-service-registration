@@ -1,10 +1,10 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#1 - Lab 5.1 Enable Self-Service Registration",
+  "title": "#2 Lab 5.2 Customize the Email Template",
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.1: Enable Self-Service Registration\n\n🎯 Objective: \n\n⏱️ Duration: "
+      "description": "## Lab 5.2: Customize the Email Template\n\n🎯 Objective: \n\n⏱️ Duration: "
     },
     {
       "title": "Lab Checkpoint",
