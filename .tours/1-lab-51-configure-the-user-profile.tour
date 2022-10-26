@@ -1,0 +1,30 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "#1 - Lab 5.1 Configure the User Profile",
+  "steps": [
+    {
+      "title": "Lab Overview",
+      "description": "## Lab 5.1 Modify the Default User Profile Requirements.\n\n 🎯 **Objective**    Update the required attributes in the Default User Profile to minimize sign up friction.\n\n  🎬 **Scenario**     Okta Ice wants to minimize customer self-registration by only requiring a username and password. Additionally, Okta Ice does not want to enforce the default email-formatted username.\n\n  ⏱️ **Duration**    15 minutes"
+    },
+    {
+      "title": "Access the User Profile Editor",
+      "description": "## Access the User Profile Editor\n\n1. Ensure you are logged in to the Admin dashboard as `oktatraining`\n\n2. Click on `Directory` > `User` from the Admin menu\n\n3. Click on `Profile Editor`\n\n4. Click `User (default)` under the **Profile** column."
+    },
+    {
+      "title": "Update Which Attributes Are Required",
+      "description": "## Update Which Attributes Are Required\n\nRecall that Okta requires four User Profile attributes by default: `login` (Username), `firstName`, `lastName`, and `email`\n\nLet's change this!\n\n1. In the **Attributes** section, click on the `i` icon that is in the **First name** `firstName` row.\n\n2. Uncheck the `Attribute required` box.\n\n3. Click the `Save Attribute` button.\n\n4. Click on the `i` icon in the **Last name** `lastName` row.\n\n5. Uncheck the `Attribute required` box.\n\n6. Click the `Save Attribute` button.\n"
+    },
+    {
+      "title": "Update Username Requirements",
+      "description": "## Update Username Requirements\n\nBy default, Okta requires usernames to be in the format of an email. Let's disable that requirement.\n\n1. Click on the `i` icon in the **Username**  `login` row.\n\n2. Next to **Format restrictions**, select `None` from the drop down menu.\n\n3. Do not save the changes just yet as we still have more to do in this section.\n"
+    },
+    {
+      "title": "Update Permissions on Attributes",
+      "description": "## Update Permissions on Attributes\n\nIn order to allow users to set their own username and email address during self-service registration, they will need write access to these attributes.\n\n1. Still in the `Username` editing window, find the to **User permission** section.\n\n2. Click the `Read-Write` radio button. \n\n3. Click the `Save Attribute` button.\n\n4. Click the `i` icon in the **Primary email** `email` row.\n\n5. In the **User permission** section, click the `Read-Write` radio button. \n\n6. Click the `Save Attribute` button."
+    },
+    {
+      "title": "Lab Checkpoint",
+      "description": "## ✅ Checkpoint\n\nAt this point, you have updated the default User Profile and attribute permissions. Now you are ready to enable self-service registration for Okta Ice's customer applications!"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#4 Lab 5.4 Implement a User Account Update Event Hook",
+  "title": "#5 - Lab 5.5 Implement a User Account Update Event Hook",
   "steps": [
     {
       "title": "Lab Overview",

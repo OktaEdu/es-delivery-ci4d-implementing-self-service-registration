@@ -1,14 +1,30 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#1 - Lab 5.1 Enable Self-Service Registration",
+  "title": "#2 - Lab 5.2 Enable Self Service Registration",
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.1: Enable Self-Service Registration\n\n🎯 Objective: \n\n⏱️ Duration: "
+      "description": "## Lab 5.1: Enable Self-Service Registration\n\n 🎯 **Objective**    Configure Self-Service Registration for customer applications.\n\n  🎬 **Scenario**     Okta Ice would like to allow customers to self-register to access customer applications.\n\n  ⏱️ **Duration**    15 minutes"
+    },
+    {
+      "title": "Create Profile Enrollment Policy",
+      "description": "## Create Profile Enrollment Policy\n\n1. Navigate to `Security` > `Profile Enrollment`\n\n2. Click `Add Profile Enrollment Policy`\n\n3. Name this policy `Customer Apps Enrollment Policy`\n\n4. Click `Save`"
+    },
+    {
+      "title": "Enable Self-Registration in the Profile Enrollment Policy",
+      "description": "## Enable Self-Registration in the Profile Enrollment Policy\n\n1. Click the `Pencil icon` next to the policy you just created (`Customer Apps Enrollment Policy`)\n\n2. Notice that `Self-service registration` is already `Allowed` in this policy. Keep it this way and stay on this page.\n\n3. In the **Profile Enrollment** section, click `Edit`\n\n4. Next to **Add the user to group**, enter and select `Customers`"
+    },
+    {
+      "title": "Add Customer Applications to the Profile Enrollment Policy",
+      "description": "## Add Customer Applications to the Profile Enrollment Policy\n\n1. Click `Manage Apps`\n\n2. Click `Add App to this Policy`\n\n3. Next to `Customer Rewards`, click `Apply`\n\n4. Next to `Customer Polling`, click `Apply`\n\n5. Click `Close`"
+    },
+    {
+      "title": "Specify Fields for the Enrollment Form",
+      "description": "## Specify Fields for the Enrollment Form\n\nThe Enrollment Form will appear during Self-Service Registation\n\n1. Click the `← Back to Profile Enrollment Policy` link at the top of the page.\n\n2. Scroll down to the **Profile enrollment form** section.\n\n3. Click `Add form input`\n\n4. Select `Username (login)`"
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, "
+      "description": "## ✅ Checkpoint\n\nAt this point, you have configured self-service registration for the the customer applications."
     }
   ]
 }
