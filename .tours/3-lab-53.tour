@@ -1,14 +1,73 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#3 Lab 5.3 Implement a Registration Inline Hook",
+  "title": "#3 - Lab 5.3 Customize an Email Template",
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.3: Implement a Registration Inline Hook\n\n🎯 Objective: \n\n⏱️ Duration:"
+      "description": "## Lab 5.3 Customize an Email Template\n\n 🎯 **Objective**    Customize the email template used to generate the email customers receive when they sign up for Okta Ice's customer apps.\n\n  🎬 **Scenario**     Okta Ice would like to apply their own branding to the email that customers receive after registration. They also need to modify the HTML code so that customers are greeted by their username.\n\n  ⏱️ **Duration**    15 minutes"
+    },
+    {
+      "title": "Navigate to the Branding UI",
+      "description": "## Navigate to the Branding UI\n\n1. Ensure you are logged in to the Okta Admin dashboard as `oktatraining`\n\n2. From the Admin menu, go to `Customizations` > `Branding`"
+    },
+    {
+      "title": "Edit the Base Email Style",
+      "description": "\n\n## Edit the Base Email Style\n\n1. Under **Communication**, find the **Base email style** section\n\n2. Click the `Edit` button.\n\n3. Select `Solid background` -- this will replace the Okta logo with the logo we uploaded in Module 2. It will also set the email background color to the secondary color we set in Module 2.\n\n4. At the top of the page, click `Save and publish`"
+    },
+    {
+      "title": "Navigate to the Emails UI",
+      "description": "## Navigate to the Emails UI\n\nFrom the Admin menu, go to `Customizations` > `Emails`"
+    },
+    {
+      "title": "Open the Default Email Editor",
+      "description": "## Open the Default Email Editor\n\nNow we're going to customize the content of the **Email Factor Verification** email that users receive when they sign up for customer applications.\n\n1. In the **Emails** UI, scroll down to the **Other** section.\n\n2. Select **Email Factor Verification**\n\n3. Click `Edit`"
+    },
+    {
+      "file": "custom-email-template.html",
+      "description": "## Examine the Email Factor Verification Template\n\nFor your convenience, we've displayed an editable copy of the default HTML code used to generate the Email Factor Verification emails here in VSCode. \n\n1. Examine the line above the comment. This generates the salutation. \nNotice that it references the profile attribute `user.profile.firstName`\n\n2. Recall that we've updated the Default User Profile so that customers do not have to provide a first name. This means the email generated will look like:\n\n`Hi , `\n\nThis doesn't look very professional at all, so let's fix this by greeting the user by their `login` (username) instead.",
+      "line": 22,
+      "title": "Examine the Email Factor Verification Template"
+    },
+    {
+      "file": "custom-email-template.html",
+      "description": "## Edit the Email Factor Verification Template\n\nLet's edit the highlighted line so that it references the user's `login` profile attribute:\n\n```javascript\nHi $!{StringTool.escapeHtml($!{user.profile.login})},\n```\n\nYou can do this by manually editing the line, or by clicking the **Insert Code** link above. \n\nFinally, click [here](command:workbench.action.files.save) to save your changes.",
+      "line": 21
+    },
+    {
+      "title": "Apply the Changes in the Email UI",
+      "description": "## Apply the Changes in the Email UI\n\n1. Highlight and copy the entire contents of the `custom-email-template.html` file that is open in VSCode.\n\n2. Switch back to your Chrome browser.\n\n3. Highlight the contents of **Message** by clicking in the field and pressing `CTRL`+`A`\n\n4. Delete the default HTML code.\n\n5. Paste the updated HTML code by pressing `CTRL`+`V`\n\n6. Scroll all the way to the bottom and click `Save`\n\n7. Optionally, click on `English (en)` to preview a sample email.\n"
+    },
+    {
+      "title": "Import and Run Your Previous Configured Web Apps",
+      "description": "## Import And Run Your Previously Configured Web Apps\n\nWe will now copy the web applications we previously configured to this workspace, so that we can test out self-service registration and the customized Email Factor Verification email.\n\n1. Click [here to copy the previously configured applications](command:codetour.sendTextToTerminal?[\"mkdir redirect & mkdir embedded & cp ../es-delivery-ci4d-introducing-okta/redirect/* redirect & cp ../es-delivery-ci4d-introducing-okta/embedded/* embedded\"]).\n\n2. Click [here to launch the web server](command:codetour.sendTextToTerminal?[\"python3 -m http.server 8080\"])."
+    },
+    {
+      "title": "Explore Self Service Registration Availability",
+      "description": "## Explore Self Service Registration Availability\n\n1. Log out of `oktatraining`\n\n2. In Chrome, navigate to http://localhost:8080\n\n3. Click on `Polling App (Embedded Widget)`\n\n4. Notice there is now a `Sign up` link\n\n5. Click on `Return to Portal`\n\n6. Click on `Rewards App (Redirect)`\n\n7. Notice that there is a `Sign up` link here as well.\n\n8. Click the `Back` button in Chrome to return to the index page.\n\n9. Click `CSRM App (Redirect)\n\n10. Notice that there is no `Sign up` link here since this is a Franchisee app, and only applied our Profile Enrollment Policy to customer apps.\n\n11. Once again, press the `Back` button in the Chrome browser to return to the index page."
+    },
+    {
+      "title": "Test Self Service Registration",
+      "description": "## Test Self Service Registration\n\n1. Click on `Rewards App (Redirect)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Email Factor Verification email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter whatever you like for the **Username**\n\n5. Click the `Sign Up` button.\n"
+    },
+    {
+      "title": "Set Up a Password",
+      "description": "## Set Up a Password\nYou'll now be asked to set up a password.\n\n1. Set and confirm your password as  `Tra!nme4321`\n\n2. Click `Next`"
+    },
+    {
+      "title": "Verify Your Email",
+      "description": "## Verify Your Email\n\nSince you must verify our email upon self-service registration, you get to see your custom **Email Factor Verification** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Confirm your email address** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Rewards app."
+    },
+    {
+      "title": "Test Web SSO",
+      "description": "It may seem like you are only registered for the Rewards app. However, recall that our Profile Enrollment Policy adds self-registered users to the **Customers** group. So, you should have access to the Polling app too!\n\n1. Click on `Return to Portal`\n\n2. Click on `Polling App (Embedded Widget)`\n\nBecause you have an existing session and are a member of the **Customers** group, you are authenticated for the Polling App without having to register for this application or enter your credentials again!"
+    },
+    {
+      "title": "Close Your Okta Session",
+      "description": "## Close Your Okta Session\n\n1. In the Polling App in the Chrome browser, click the `Close Okta Session` button. This will log you out of Okta.\n\n2. You may now close this browser tab."
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, "
+      "description": "## ✅ Checkpoint\n\nAt this point, you have customized the email template used to generate the **Email Factor Verification** customers receive when they sign up for applications. You have also verified that self-service registration works for customer applications, and that these users can access all customer applications via web SSO."
     }
   ]
 }
