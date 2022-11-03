@@ -39,7 +39,7 @@
     },
     {
       "title": "Import and Run Your Previous Configured Web Apps",
-      "description": "## Import And Run Your Previously Configured Web Apps\n\nWe will now copy the web applications we previously configured to this workspace, so that we can test out self-service registration and the customized Email Factor Verification email.\n\n1. Click [here to copy the previously configured applications](command:codetour.sendTextToTerminal?[\"mkdir redirect; mkdir embedded & cp ../03-exploring-authentication-protocol-flows/redirect/* redirect; cp ../03-exploring-authentication-protocol-flows/* embedded\"]).\n\n2. Click [here to launch the web server](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"])."
+      "description": "## Import And Run Your Previously Configured Web Apps\n\nWe will now copy the web applications we previously configured to this workspace, so that we can test out self-service registration and the customized Email Factor Verification email.\n\n1. Click [here to copy the previously configured applications](command:codetour.sendTextToTerminal?[\"mkdir redirect; mkdir embedded; cp ../03-exploring-authentication-protocol-flows/redirect/* redirect; cp ../03-exploring-authentication-protocol-flows/* embedded\"]).\n\n2. Click [here to launch the web server](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"])."
     },
     {
       "title": "Explore Self Service Registration Availability",
