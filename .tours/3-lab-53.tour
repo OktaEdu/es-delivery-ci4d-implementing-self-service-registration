@@ -63,7 +63,7 @@
     },
     {
       "title": "Close Your Okta Session",
-      "description": "## Close Your Okta Session\n\n1. In the Polling App in the Chrome browser, click the `Close Okta Session` button. This will log you out of Okta.\n\n2. You may now close this browser tab."
+      "description": "## Close Your Okta Session\n\n1. In the Polling App in the Chrome browser, click the `Close Okta Session` button. This will log you out of Okta.\n\n2. You may now close this browser tab.\n\n3. Keep your web server running, as it will be used in the next labs."
     },
     {
       "title": "Lab Checkpoint",

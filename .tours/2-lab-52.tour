@@ -95,7 +95,7 @@
     },
     {
       "title": "Test the Registration Inline Hook ",
-      "description": "## Test the Registration Inline Hook \n\n1. Visit the Okta Ice Portal at http://localhost:8080 \n **If your Okta Ice Portal app is no longer running, click here to run it first.**\n\n2. Click on `Rewards App (Redirect)`\n\n3. Click the `Sign up` link\n\nIn the next steps, we are going to test the following cases (where `example.com` is any domain):\n\n- **`allow.example.com`** - Registration will be allowed, and the response to Okta will include a debugContext message.\n\n- **any other domain** - The response to Okta will include a command to deny the registration, an error object that will be displayed in the Sign-In widget, and a debugContext message."
+      "description": "## Test the Registration Inline Hook \n\n1. Visit the Okta Ice Portal at http://localhost:8080 \n ***If*** your Okta Ice Portal app is no longer running,  [**click here**](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first.\n\n2. Click on `Rewards App (Redirect)`\n\n3. Click the `Sign up` link\n\nIn the next steps, we are going to test the following cases (where `example.com` is any domain):\n\n- **`allow.example.com`** - Registration will be allowed, and the response to Okta will include a debugContext message.\n\n- **any other domain** - The response to Okta will include a command to deny the registration, an error object that will be displayed in the Sign-In widget, and a debugContext message."
     },
     {
       "title": "Test the Registration Inline Hook - Allow Case",
