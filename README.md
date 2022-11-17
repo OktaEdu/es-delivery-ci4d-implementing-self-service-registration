@@ -4,26 +4,16 @@
 
 This repo contains everything you need to complete the labs in this module:
 
-- Lab 5-1: Enable Self-Service Registration (Sign Up)
-- Lab 5-2: Customize the Email Template
-- Lab 5-3: Implement a Registration Inline Hook
-- Lab 5-4: Implement a User Account Update Event Hook
+- Lab 5.1: Configure the User Profile
+- Lab 5.2: Enable Self-Service Registration
+- Lab 5.3: Customize the Email Template
+- Lab 5.4: Implement a Registration Inline Hook
+- Lab 5.5: Implement a User Account Update Event Hook
 
-## How to Use
+## How to Start the Labs
 
-1. Clone this codebase: 
-```
-git clone https://github.com/OktaEdu/es-delivery-ci4d-implementing-self-service-registration
-```
-2. Navigate to your local repo: 
-```
-cd /es-delivery-ci4d-implementing-self-service-registration
-```
-3. Open in VSCode: 
-```
-code .
-```
-4. The CodeTour for Lab 5.1 will open automatically. If it doesn't, press the `Start Tour` button.
+
+These labs are guided by a VSCode plugin called CodeTour. To start Lab 5.1, first expand the **CODETOUR** tab on the lefthand side of VSCode. Then press the ![Start Tour](./.tour-resources/play.png) button next to Lab 5.1.
 
 ![Start Code Tour](./.tour-resources/start-tour.gif)
 
