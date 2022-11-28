@@ -53,15 +53,15 @@
     },
     {
       "title": "Explore Self Service Registration Availability",
-      "description": "## Explore Self Service Registration Availability\n\n1. Log out of `oktatraining`\n\n2. In Chrome, navigate to http://localhost:8080\n\n3. Click on `Polling App (Embedded Widget)`\n\n4. Notice there is now a `Sign up` link\n\n5. Click on `Return to Portal`\n\n6. Click on `Rewards App (Redirect)`\n\n7. Notice that there is a `Sign up` link here as well.\n\n8. Click the `Back` button in Chrome to return to the index page.\n\n9. Click `CSRM App (Redirect)\n\n10. Notice that there is no `Sign up` link here since this is a Franchisee app, and only applied our Profile Enrollment Policy to customer apps.\n\n11. Once again, press the `Back` button in the Chrome browser to return to the index page."
+      "description": "## Explore Self Service Registration Availability\n\n1. Log out of `oktatraining`\n\n2. In Chrome, navigate to http://localhost:8080\n\n3. Click on `Polling App (Embedded Widget)`\n\n4. Notice there is now a `Sign up` link\n\n5. Click on `Return to Portal`\n\n6. Click on `Rewards App (Redirect)`\n\n7. Notice that there is a `Sign up` link here as well.\n\n8. Click the `Back` button in Chrome to return to the index page.\n\n9. Click `CRM App (Redirect)\n\n10. Notice that there is no `Sign up` link here since this is a Franchisee app, and only applied our Profile Enrollment Policy to customer apps.\n\n11. Once again, press the `Back` button in the Chrome browser to return to the index page."
     },
     {
       "title": "Test Self Service Registration",
-      "description": "## Test Self Service Registration\n\n1. Click on `Rewards App (Redirect)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Email Factor Verification email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter whatever you like for the **Username**\n\n5. Click the `Sign Up` button.\n"
+      "description": "## Test Self Service Registration\n\n1. Click on `Rewards App (Redirect)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Email Factor Verification email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter `oktalab` for the **Username**\n\n5. Click the `Sign Up` button.\n"
     },
     {
       "title": "Set Up a Password",
-      "description": "## Set Up a Password\nYou'll now be asked to set up a password.\n\n1. Set and confirm your password as  `Tra!nme4321`\n\n2. Click `Next`"
+      "description": "## Set Up a Password\nYou'll now be asked to set up a password.\n\n1. Click `Setup up` under **Password**\n2. Set and confirm your password as  `Tra!nme4321`\n\n3. Click `Next`"
     },
     {
       "title": "Verify Your Email",
