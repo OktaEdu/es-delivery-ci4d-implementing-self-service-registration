@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.1 Modify the Default User Profile Requirements.\n\n 🎯 **Objective**    Update the required attributes in the Default User Profile to minimize sign up friction.\n\n  🎬 **Scenario**     Okta Ice wants to minimize customer self-registration by only requiring a username and password. Additionally, Okta Ice does not want to enforce the default email-formatted username.\n\n  ⏱️ **Duration**    15 minutes"
+      "description": "## Lab 5.1 Modify the Default User Profile Requirements.\n\n 🎯 **Objective**    Update the required attributes in the Default User Profile to minimize sign up friction.\n\n  🎬 **Scenario**     Okta Ice wants to simplify customer self-registration by only requiring a username and password. Additionally, Okta Ice does not want to enforce the default email-formatted username.\n\n  ⏱️ **Duration**    15 minutes"
     },
     {
       "title": "Access the User Profile Editor",
