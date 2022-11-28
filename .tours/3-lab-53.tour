@@ -31,7 +31,16 @@
     {
       "file": "custom-email-template.html",
       "description": "## Edit the Email Factor Verification Template\n\nLet's edit the highlighted line so that it references the user's `login` profile attribute:\n\n```javascript\nHi $!{StringTool.escapeHtml($!{user.profile.login})},\n```\n\nYou can do this by manually editing the line, or by clicking the **Insert Code** link above. \n\nFinally, click [here](command:workbench.action.files.save) to save your changes.",
-      "line": 21
+      "selection": {        
+        "start": {          
+          "line": 21,          
+          "character": 24        
+          },        
+          "end": {          
+            "line": 21,          
+            "character": 82        
+          }      
+        }
     },
     {
       "title": "Apply the Changes in the Email UI",

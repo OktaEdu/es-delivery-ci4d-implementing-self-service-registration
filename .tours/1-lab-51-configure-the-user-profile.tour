@@ -8,7 +8,7 @@
     },
     {
       "title": "Access the User Profile Editor",
-      "description": "## Access the User Profile Editor\n\n1. Ensure you are logged in to the Admin dashboard as `oktatraining`\n\n2. Click on `Directory` > `User` from the Admin menu\n\n3. Click on `Profile Editor`\n\n4. Click `User (default)` under the **Profile** column."
+      "description": "## Access the User Profile Editor\n\n1. Ensure you are logged in to the Admin dashboard as `oktatraining`\n\n2. Click on `Directory` > ` Profile Editor` from the Admin menu\n\n3. Click `User (default)` under the **Profile** column."
     },
     {
       "title": "Update Which Attributes Are Required",
