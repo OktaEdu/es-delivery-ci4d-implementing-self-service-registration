@@ -87,7 +87,7 @@
     },
     {
       "title": "Create the Registration Inline Hook",
-      "description": "\n## Create the Registration Inline Hook\n\n1. Ensure you are signed in to the Okta Admin dashboard as your Super Admin account, `oktatraining`.\n\n2. In the Admin menu, select `Workflows` > `Inline Hooks`\n\n3. Click  `Add Inline Hook` and select `Registration` from the drop down menu.\n\n4. For `Name`, enter `Email Domain Registration Hook`\n\n5. For `URL`, enter `https://es-okta-hooks.glitch.me/okta/hooks/registration/domain`\n\n6. For `Authentication key`, enter `x-api-key`\n\n7. For `Authentication secret`, enter `NOTUSED` (this is just a placeholder value for our class demonstration purposes)\n\n8. Click `Save`"
+      "description": "\n## Create the Registration Inline Hook\n\n1. Ensure you are signed in to the Okta Admin dashboard as your Super Admin account, `oktatraining`.\n\n2. In the Admin menu, select `Workflow` > `Inline Hooks`\n\n3. Click  `Add Inline Hook` and select `Registration` from the drop down menu.\n\n4. For `Name`, enter `Email Domain Registration Hook`\n\n5. For `URL`, enter `https://es-okta-hooks.glitch.me/okta/hooks/registration/domain`\n\n6. For `Authentication key`, enter `x-api-key`\n\n7. For `Authentication secret`, enter `NOTUSED` (this is just a placeholder value for our class demonstration purposes)\n\n8. Click `Save`"
     },
     {
       "title": "Enable the Registration Inline Hook",

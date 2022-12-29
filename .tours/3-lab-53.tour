@@ -45,7 +45,7 @@
     {
       "file": "custom-email-template.html",
       "title": "Apply the Changes in the Email UI",
-      "description": "## Apply the Changes in the Email UI\n\n1. Notice that this step automatically opens the `custom-email-template.html` file in VSCode.\n\n2. Select all of the code by clicking into the body of the code and pressing `CTRL-A`\n\n3. Copy this selection by pressing `CTRL-V`\n\n4. Switch back to your Chrome browser.\n\n5. Select all of the contents in the **Message** field by clicking in the field and pressing `CTRL`+`A`\n\n4. Delete the default HTML code by pressing your `backspace` key.\n\n5. Paste the updated HTML code by pressing `CTRL`+`V`\n\n6. Scroll all the way to the bottom and click `Save`\n\n7. Optionally, click on `English (en)` to preview a sample email.\n"
+      "description": "## Apply the Changes in the Email UI\n\n1. Notice that this step automatically opens the `custom-email-template.html` file in VSCode.\n\n2. Select all of the code by clicking into the body of the code and pressing `CTRL`+`A`\n\n3. Copy this selection by pressing `CTRL`+`C`\n\n4. Switch back to your Chrome browser.\n\n5. Select all of the contents in the **Message** field by clicking in the field and pressing `CTRL`+`A`\n\n4. Delete the default HTML code by pressing your `backspace` key.\n\n5. Paste the updated HTML code by pressing `CTRL`+`V`\n\n6. Scroll all the way to the bottom and click `Save`\n\n7. Optionally, click on `English (en)` to preview a sample email.\n"
     },
     {
       "title": "Import and Run Your Previous Configured Web Apps",
