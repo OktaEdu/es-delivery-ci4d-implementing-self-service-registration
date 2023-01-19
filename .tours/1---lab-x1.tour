@@ -20,7 +20,7 @@
     },
     {
       "title": "Specify Fields for the Enrollment Form",
-      "description": "## Specify Fields for the Enrollment Form\n\nThe Enrollment Form will appear during Self-Service Registation\n\n1. Click the `Back to Profile Enrollment Policy` link at the top of the page.\n\n2. Scroll down to the **Profile enrollment form** section.\n\n3. Click the `Delete` button next to `First Name` and confirm by clicking `Delete form input`\n\n4. Click the `Delete` button next to `Last Name` and confirm by clicking `Delete form input`\n\n5. Click `Add form input`\n\n6. Select `Username (login)`\n\n7. Click `Save`"
+      "description": "## Specify Fields for the Enrollment Form\n\nThe Enrollment Form will appear during Self-Service Registation\n\n1. Click the `Back to Profile Enrollment Policy` link at the top of the page.\n\n2. Scroll down to the **Profile enrollment form** section.\n\n5. Click `Add form input`\n\n6. Select `Username (login)`\n\n7. Click `Save`"
     },
     {
       "title": "Lab Checkpoint",
