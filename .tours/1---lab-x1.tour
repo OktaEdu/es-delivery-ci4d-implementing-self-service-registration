@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.1: Enable Self-Service Registration\n\n 🎯 **Objective**    Configure Self-Service Registration for customer applications.\n\n  🎬 **Scenario**     Okta Ice would like to allow customers to self-register to access customer applications.\n\n  ⏱️ **Duration**    15 minutes"
+      "description": "## Lab 5.2: Enable Self-Service Registration\n\n 🎯 **Objective**    Configure Self-Service Registration for customer applications.\n\n  🎬 **Scenario**     Okta Ice would like to allow customers to self-register to access customer applications.\n\n  ⏱️ **Duration**    15 minutes\n\n  ⚠️ Prerequisites: Labs 1.4, 2.4, and 5.1"
     },
     {
       "title": "Create Profile Enrollment Policy",

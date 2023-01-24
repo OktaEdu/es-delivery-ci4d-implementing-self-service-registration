@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "\n## Lab 5.4 Customize Implement a Registration Inline Hook\n\n 🎯 **Objective**    Implement an Okta Inline Hook to customize the Profile Enrollment flow during Self-Service Registration.\n\n  🎬 **Scenario**     During their testing phase, Okta Ice would like to limit self-service registration to their customer applications to people with certain email domain names.\n\n  ⏱️ **Duration**    20 minutes"
+      "description": "\n## Lab 5.4 Customize Implement a Registration Inline Hook\n\n 🎯 **Objective**    Implement an Okta Inline Hook to customize the Profile Enrollment flow during Self-Service Registration.\n\n  🎬 **Scenario**     During their testing phase, Okta Ice would like to limit self-service registration to their customer applications to people with certain email domain names.\n\n  ⏱️ **Duration**    20 minutes\n\n⚠️ Prerequisites: Labs 1.4, 3.1, 5.1, 5.2, and 5.3"
     },
     {
       "title": "Preparation and Background",

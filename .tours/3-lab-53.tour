@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.3 Customize an Email Template\n\n 🎯 **Objective**    Customize the email template used to generate the email customers receive when they sign up for Okta Ice's customer apps.\n\n  🎬 **Scenario**     Okta Ice would like to apply their own branding to the email that customers receive after registration. They also need to modify the HTML code so that customers are greeted by their username.\n\n  ⏱️ **Duration**    15 minutes"
+      "description": "## Lab 5.3 Customize an Email Template\n\n 🎯 **Objective**    Customize the email template used to generate the email customers receive when they sign up for Okta Ice's customer apps.\n\n  🎬 **Scenario**     Okta Ice would like to apply their own branding to the email that customers receive after registration. They also need to modify the HTML code so that customers are greeted by their username.\n\n  ⏱️ **Duration**    15 minutes\n\n⚠️ Prerequisites: Labs 1.4, 3.1, 5.1, and 5.2"
     },
     {
       "title": "Navigate to the Branding UI",
