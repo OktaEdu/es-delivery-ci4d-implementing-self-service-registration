@@ -8,23 +8,15 @@
     },
     {
       "title": "Navigate to the Branding UI",
-      "description": "## Navigate to the Branding UI\n\n1. Ensure you are logged in to the Okta Admin dashboard as `oktatraining`\n\n2. From the Admin menu, go to `Customizations` > `Branding`"
+      "description": "## Navigate to the Branding UI\n1. Ensure you are logged in to the Okta Admin dashboard as `oktatraining`\n\n2. From the Admin menu, go to `Customizations` > `Brands`\n\n3. Click on `Okta Ice` from your list of brands."
     },
     {
-      "title": "Edit the Base Email Style",
-      "description": "\n\n## Edit the Base Email Style\n\n1. Under **Communication**, find the **Emails** section and click the `Edit` button.\n2. On the **Emails** page, locate the **Base email styles** section and click `Configure`\n3. Select `Solid background` -- this will replace the Okta logo with the logo we uploaded in Module 2. It will also set the email background color to the secondary color we set in Module 2.\n\n4. At the top of the page, click `Save and publish`"
-    },
-    {
-      "title": "Navigate to the Emails UI",
-      "description": "## Navigate to the Emails UI\n\nOn the **Base email style** page, click on the `Emails` breadcrumb link to get to the mail **Emails** page."
-    },
-    {
-      "title": "Open the Default Email Editor",
-      "description": "## Open the Default Email Editor\n\nNow we're going to customize the content of the **Email Factor Verification** email that users receive when they sign up for customer applications.\n\n1. In the **Email Templates** table, locate and click on  `Email Factor verification`\n\n2. In the **Preview** window, select the `Code` tab and click on the `Edit` button within that window."
+      "title": "Navigate to the Email Templates",
+      "description": "## Navigate to the Emails Templates\n\n1. Click **Emails**\n2. In the **Email Templates** table, locate and click on `Email Factor verification`\n3. Notice that your custom logo is automatically applied to this template."
     },
     {
       "file": "custom-email-template.html",
-      "description": "## Examine the Email Factor Verification Template\n\nFor your convenience, we've displayed an editable copy of the default HTML code used to generate the Email Factor Verification emails here in VSCode. \n\n1. Examine the line above the comment. This generates the salutation. \nNotice that it references the profile attribute `user.profile.firstName`\n\n2. Recall that we've updated the Default User Profile so that customers do not have to provide a first name. This means the email generated will look like:\n\n`Hi , `\n\nThis doesn't look very professional at all, so let's fix this by greeting the user by their `login` (username) instead.",
+      "description": "## Examine the Email Factor Verification Template\nNow we're going to customize the content of the **Email Factor Verification** email that users receive when they sign up for customer applications.\n\n1. Click `Edit` to open the code editor for the Email Factor Verification template.\n   For your convenience, we've added an editable copy of the default HTML code used to generate the Email Factor Verification emails here in this VSCode workspace. It's called `default-email-template.html`\n\n2. Examine the line above the comment. This generates the salutation.\n   Notice that it references the profile attribute `user.profile.firstName`\n\n3. Recall that we've updated the Default User Profile so that customers do not have to provide a first name. This means the email generated will look like:\n\n`Hi , `\n\nThis doesn't look very professional at all, so let's fix this by greeting the user by their `login` (username) instead.",
       "line": 22,
       "title": "Examine the Email Factor Verification Template"
     },
@@ -45,7 +37,7 @@
     {
       "file": "custom-email-template.html",
       "title": "Apply the Changes in the Email UI",
-      "description": "## Apply the Changes in the Email UI\n\n1. Notice that this step automatically opens the `custom-email-template.html` file in VSCode.\n\n2. Select all of the code by clicking into the body of the code and pressing `CTRL`+`A`\n\n3. Copy this selection by pressing `CTRL`+`C`\n\n4. Switch back to your Chrome browser.\n\n5. Select all of the contents in the **Message** field by clicking in the field and pressing `CTRL`+`A`\n\n4. Delete the default HTML code by pressing your `backspace` key.\n\n5. Paste the updated HTML code by pressing `CTRL`+`V`\n\n6. Click the `Save changes` button.\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
+      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`A`\n3. Return to your Chrome browser tab that has the **Email Factor verification** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
     },
     {
       "title": "Import and Run Your Previous Configured Web Apps",
