@@ -12,24 +12,24 @@
     },
     {
       "title": "Navigate to the Email Templates",
-      "description": "## Navigate to the Emails Templates\n\n1. Click **Emails**\n2. In the **Email Templates** table, locate and click on `Email Factor verification`\n3. Notice that your custom logo is automatically applied to this template."
+      "description": "## Navigate to the Emails Templates\n\n1. Click **Emails**\n2. In the **Email Templates** table, locate and click on `Registration - Activation`\n3. Notice that your custom logo is automatically applied to this template."
     },
     {
       "file": "custom-email-template.html",
-      "description": "## Examine the Email Factor Verification Template\nNow we're going to customize the content of the **Email Factor Verification** email that users receive when they sign up for customer applications.\n\n1. Click `Edit` to open the code editor for the Email Factor Verification template.\n   For your convenience, we've added an editable copy of the default HTML code used to generate the Email Factor Verification emails here in this VSCode workspace. It's called `default-email-template.html`\n\n2. Examine the line above the comment. This generates the salutation.\n   Notice that it references the profile attribute `user.profile.firstName`\n\n3. Recall that we've updated the Default User Profile so that customers do not have to provide a first name. This means the email generated will look like:\n\n`Hi , `\n\nThis doesn't look very professional at all, so let's fix this by greeting the user by their `login` (username) instead.",
-      "line": 22,
-      "title": "Examine the Email Factor Verification Template"
+      "description": "## Examine the Registration - Activation Template\nNow we're going to customize the content of the **Registration - Activation** email that users receive when they sign up for customer applications.\n\n1. Click `Edit` to open the code editor for the Registration - Activation template.\n   For your convenience, we've added an editable copy of the default HTML code used to generate the Registration - Activation emails here in this VSCode workspace. It's called `default-email-template.html`\n\n2. Examine the highlighted line above. This generates the salutation.\n   Notice that it references the profile attribute `user.profile.firstName`\n\n3. Recall that we've updated the Default User Profile so that customers do not have to provide a first name. This means the email generated will look like:\n\n`Hi , `\n\nThis doesn't look very professional at all, so let's fix this by greeting the user by their `login` (username) instead.",
+      "line": 19,
+      "title": "Examine the Registration - Activation Template"
     },
     {
       "file": "custom-email-template.html",
-      "description": "## Edit the Email Factor Verification Template\n\nLet's edit the highlighted line so that it references the user's `login` profile attribute:\n\n```javascript\nHi $!{StringTool.escapeHtml($!{user.profile.login})},\n```\n\nYou can do this by manually editing the line, or by clicking the **Insert Code** link above. \n\nFinally, click [here](command:workbench.action.files.save) to save your changes.",
+      "description": "## Edit the Registration - Activation Template\n\nLet's edit the highlighted line so that it references the user's `login` profile attribute:\n\n```javascript\nHi $!{StringTool.escapeHtml($!{user.profile.login})},\n```\n\nYou can do this by manually editing the line, or by clicking the **Insert Code** link above. \n\nFinally, click [here](command:workbench.action.files.save) to save your changes.",
       "selection": {
         "start": {
-          "line": 21,
+          "line": 19,
           "character": 24
         },
         "end": {
-          "line": 21,
+          "line": 19,
           "character": 82
         }
       }
@@ -37,11 +37,11 @@
     {
       "file": "custom-email-template.html",
       "title": "Apply the Changes in the Email UI",
-      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`A`\n3. Return to your Chrome browser tab that has the **Email Factor verification** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
+      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`A`\n3. Return to your Chrome browser tab that has the **Registration - Activation** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
     },
     {
       "title": "Import and Run Your Previous Configured Web Apps",
-      "description": "## Import And Run Your Previously Configured Web Apps\n\nWe will now copy the web applications we previously configured to this workspace, so that we can test out self-service registration and the customized Email Factor Verification email.\n\n1. Click [here to copy the previously configured applications](command:codetour.sendTextToTerminal?[\"mkdir redirect; mkdir embedded; cp ../03-exploring-authentication-protocol-flows/redirect/* redirect; cp ../03-exploring-authentication-protocol-flows/embedded/* embedded\"]).\n\n2. Click [here to launch the web server](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]).\n\nYou should now see the following message in your terminal:\n\n`Serving HTTP on :: port 8080 (http://[::]:8080/) ...`"
+      "description": "## Import And Run Your Previously Configured Web Apps\n\nWe will now copy the web applications we previously configured to this workspace, so that we can test out self-service registration and the customized Registration - Activation email.\n\n1. Click [here to copy the previously configured applications](command:codetour.sendTextToTerminal?[\"mkdir redirect; mkdir embedded; cp ../03-exploring-authentication-protocol-flows/redirect/* redirect; cp ../03-exploring-authentication-protocol-flows/embedded/* embedded\"]).\n\n2. Click [here to launch the web server](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]).\n\nYou should now see the following message in your terminal:\n\n`Serving HTTP on :: port 8080 (http://[::]:8080/) ...`"
     },
     {
       "title": "Explore Self Service Registration Availability",
@@ -49,15 +49,15 @@
     },
     {
       "title": "Test Self Service Registration",
-      "description": "## Test Self Service Registration\n\n1. Click on `Rewards App (Redirect)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Email Factor Verification email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter `oktalab` for the **Username**\n\n5. Click the `Sign Up` button.\n"
+      "description": "## Test Self Service Registration\n\n1. Click on `Rewards App (Redirect)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Registration - Activation email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter `oktalab` for the **Username**\n\n5. Click the `Sign Up` button.\n"
     },
     {
       "title": "Set Up a Password",
       "description": "## Set Up a Password\nYou'll now be asked to set up a password.\n\n1. Click `Setup up` under **Password**\n2. Set and confirm your password as  `Tra!nme4321`\n\n3. Click `Next`"
     },
     {
-      "title": "Verify Your Email",
-      "description": "## Verify Your Email\n\nSince you must verify our email upon self-service registration, you get to see your custom **Email Factor Verification** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Confirm your email address** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Rewards app."
+      "title": "Activate Your Account",
+      "description": "## Activate Your Account\n\nBy default, newly registered accounts are not activated until the user's email is verified, so you will be sent the custom **Registration - Activation** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Welcome to...** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Rewards app."
     },
     {
       "title": "Test Web SSO",
@@ -69,7 +69,7 @@
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, you have customized the email template used to generate the **Email Factor Verification** customers receive when they sign up for applications. You have also verified that self-service registration works for customer applications, and that these users can access all customer applications via web SSO."
+      "description": "## ✅ Checkpoint\n\nAt this point, you have customized the email template used to generate the **Registration - Activation** customers receive when they sign up for applications. You have also verified that self-service registration works for customer applications, and that these users can access all customer applications via web SSO."
     }
   ]
 }
