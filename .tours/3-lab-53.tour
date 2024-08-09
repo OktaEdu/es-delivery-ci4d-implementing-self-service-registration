@@ -56,8 +56,8 @@
       "description": "## Set Up a Password\nYou'll now be asked to set up a password.\n\n1. Click `Setup up` under **Password**\n2. Set and confirm your password as  `Tra!nme4321`\n\n3. Click `Next`"
     },
     {
-      "title": "Verify Your Email",
-      "description": "## Verify Your Email\n\nSince you must verify our email upon self-service registration, you get to see your custom **Registration - Activation** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Confirm your email address** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Rewards app."
+      "title": "Activate Your Account",
+      "description": "## Activate Your Account\n\nBy default, newly registered accounts are not activated until the user's email is verified, so you will be sent the custom **Registration - Activation** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Welcome to...** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Rewards app."
     },
     {
       "title": "Test Web SSO",
