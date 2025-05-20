@@ -12,7 +12,7 @@
     },
     {
       "title": "Navigate to the Email Templates",
-      "description": "## Navigate to the Emails Templates\n\n1. Click **Emails**\n2. In the **Email Templates** table, locate and click on `Registration - Activation`\n3. Notice that your custom logo is automatically applied to this template."
+      "description": "## Navigate to the Emails Templates\n\n1. Select **Emails**\n2. In the **Email Templates** table, locate and select `Registration - Activation`\n3. Notice that your custom logo is automatically applied to this template."
     },
     {
       "file": "custom-email-template.html",
@@ -37,7 +37,7 @@
     {
       "file": "custom-email-template.html",
       "title": "Apply the Changes in the Email UI",
-      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`A`\n3. Return to your Chrome browser tab that has the **Registration - Activation** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
+      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`C`\n3. Return to your Chrome browser tab that has the **Registration - Activation** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
     },
     {
       "title": "Import and Run Your Previous Configured Web Apps",
