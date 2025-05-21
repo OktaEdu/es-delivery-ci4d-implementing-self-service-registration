@@ -12,7 +12,7 @@
     },
     {
       "title": "Navigate to the Email Templates",
-      "description": "## Navigate to the Emails Templates\n\n1. Click **Emails**\n2. In the **Email Templates** table, locate and click on `Registration - Activation`\n3. Notice that your custom logo is automatically applied to this template."
+      "description": "## Navigate to the Emails Templates\n\n1. Select **Emails**\n2. In the **Email Templates** table, locate and select `Registration - Activation`\n3. Notice that your custom logo is automatically applied to this template."
     },
     {
       "file": "custom-email-template.html",
@@ -37,7 +37,7 @@
     {
       "file": "custom-email-template.html",
       "title": "Apply the Changes in the Email UI",
-      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`A`\n3. Return to your Chrome browser tab that has the **Registration - Activation** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
+      "description": "## Apply the Changes in the Email UI\n\n\nNotice that the `custom-email-template.html` file is open in VSCode.\n\n1. Highlight the contents of `custom-email-template.html` by clicking into the VSCode editor and pressing `CTRL`+`A`\n2. Copy the contents of `custom-email-template.html` by pressing `CTRL`+`C`\n3. Return to your Chrome browser tab that has the **Registration - Activation** code editor page.\n4. Click into the code editor box and highlight the contents with `CTRL`+`A` and delete the contents pressing `BACKSPACE`\n5. Paste the contents of your clipboard by pressing `CTRL`+`V`\n6. Click `Save changes`\n\n7. Look in the **Preview** window, and you should see your changes to the template applied.\n"
     },
     {
       "title": "Import and Run Your Previous Configured Web Apps",
@@ -45,11 +45,11 @@
     },
     {
       "title": "Explore Self Service Registration Availability",
-      "description": "## Explore Self Service Registration Availability\n\n1. Log out of `oktatraining`\n\n2. In Chrome, navigate to http://localhost:8080\n\n3. Click on `Polling App (Embedded Widget)`\n\n4. Notice there is now a `Sign up` link at the bottom of the Sign In Widget\n\n5. Click on `Return to Portal`\n\n6. Click on `Rewards App (Redirect)`\n\n7. Notice that there is a `Sign up` link here as well.\n\n8. Click the `Back` button in Chrome to return to the index page.\n\n9. Click `CRM App (Redirect)`\n\n10. Notice that there is no `Sign up` link here since this is a Franchisee app, and only applied our Profile Enrollment Policy to customer apps.\n\n11. Once again, press the `Back` button in the Chrome browser to return to the index page."
+      "description": "## Explore Self Service Registration Availability\n\n1. Log out of `oktatraining`\n\n2. In Chrome, navigate to http://localhost:8080\n\n3. Click on `Rewards App (Redirect)`\n\n4. Notice there is now a `Sign up` link at the bottom of the Sign In Widget\n\n5. Click on `Return to Portal`\n\n6. Click on `Polling App (Embedded Widget)`\n\n7. Notice that there is a `Sign up` link here as well.\n\n8. Click the `Back` button in Chrome to return to the index page.\n\n9. Click `CRM App (Redirect)`\n\n10. Notice that there is no `Sign up` link here since this is a Franchisee app, and only applied our Profile Enrollment Policy to customer apps.\n\n11. Once again, press the `Back` button in the Chrome browser to return to the index page."
     },
     {
       "title": "Test Self Service Registration",
-      "description": "## Test Self Service Registration\n\n1. Click on `Rewards App (Redirect)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Registration - Activation email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter `oktalab` for the **Username**\n\n5. Click the `Sign Up` button.\n"
+      "description": "## Test Self Service Registration\n\n1. Click on `Polling App (Embedded Widget)`\n\n2. Click on `Sign up`\n\n3. For the **Email**, enter an email you have access to, so that you will be able to receive the Registration - Activation email. If you have a Gmail account, we recommend using an email alias like `<your-gmail-username>+oktalab@gmail.com`. So if your email address was `samusaran@gmail.com`, you would enter `samusaran+oktalab@gmail.com`\n\n4. Enter `oktalab` for the **Username**\n\n5. Click the `Sign Up` button.\n"
     },
     {
       "title": "Set Up a Password",
@@ -57,11 +57,11 @@
     },
     {
       "title": "Activate Your Account",
-      "description": "## Activate Your Account\n\nBy default, newly registered accounts are not activated until the user's email is verified, so you will be sent the custom **Registration - Activation** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Welcome to...** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Rewards app."
+      "description": "## Activate Your Account\n\nBy default, newly registered accounts are not activated until the user's email is verified, so you will be sent the custom **Registration - Activation** email!\n\n1. In a new Chrome tab, login to the email you used to register your account and locate the **Welcome to...** email.\n\n2. Highlight and copy the numeric verification code.\n\n3. Switch back to the tab where you initiated the self-registration process.\n\n4. Paste the numeric verification code into the **Enter Code** field.\n\n5. Click `Verify`\n\n6. If you are prompted to set up any additional optional authenticators, click `Set up later`\n\nYou should now be redirected to the Polling app."
     },
     {
       "title": "Test Web SSO",
-      "description": "It may seem like you are only registered for the Rewards app. However, recall that our Profile Enrollment Policy adds self-registered users to the **Customers** group. So, you should have access to the Polling app too!\n\n1. Click on `Return to Portal`\n\n2. Click on `Polling App (Embedded Widget)`\n\nBecause you have an existing session and are a member of the **Customers** group, you are authenticated for the Polling App without having to register for this application or enter your credentials again!"
+      "description": "It may seem like you are only registered for the Rewards app. However, recall that our Profile Enrollment Policy adds self-registered users to the **Customers** group. So, you should have access to the Polling app too!\n\n1. Click on `Return to Portal`\n\n2. Click on `Rewards App (Redirect)`\n\nBecause you have an existing session and are a member of the **Customers** group, you are authenticated for the Polling App without having to register for this application or enter your credentials again!"
     },
     {
       "title": "Close Your Okta Session",
