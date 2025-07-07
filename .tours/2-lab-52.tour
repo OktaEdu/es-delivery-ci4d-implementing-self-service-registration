@@ -8,11 +8,11 @@
     },
     {
       "title": "Preparation and Background",
-      "description": "## Preparation and Background\n\nThe Okta registration inline hook allows you to integrate your own custom code into Okta's Profile Enrollment flow. The hook is triggered after Okta receives the registration or profile update request. Your custom code can:\n\n- Allow or deny the registration attempt, based on your own validation of the information the user has submitted\n\n- Set or override the values that are populated in attributes of the user's Okta profile\n\nThis custom code must be accessible publicly on the Internet rather than our localhost. \n\nOur custom code that will handle the profile enrollment flow during self-service registration is a Nodejs app hosted on Glitch at: https://es-okta-hooks.glitch.me/"
+      "description": "## Preparation and Background\n\nThe Okta registration inline hook allows you to integrate your own custom code into Okta's Profile Enrollment flow. The hook is triggered after Okta receives the registration or profile update request. Your custom code can:\n\n- Allow or deny the registration attempt, based on your own validation of the information the user has submitted\n\n- Set or override the values that are populated in attributes of the user's Okta profile\n\nThis custom code must be accessible publicly on the Internet rather than our localhost. \n\nOur custom code that will handle the profile enrollment flow during self-service registration is a Nodejs app hosted on Render at: https://okta-hooks.onrender.com/"
     },
     {
       "file": "glitch/registrationHooks.js",
-      "description": "## Examine `registrationHooks.js` - Routing\n\nWhile our custom code for the inline hook is hosted on Glitch, the contents of `registrationHooks.js` is copied and opened here so we can walk through it.\n\n`registrationHooks.js` defines a route with the endpoint `/domain`. The anonymous function in this route gets called when the application receives a `POST` request to `https://es-okta-hooks.glitch.me/okta/hooks/registration/domain`\n\nThis is the URL Okta will need to call to via the inline hook during self-service registration.   ",
+      "description": "## Examine `registrationHooks.js` - Routing\n\nWhile our custom code for the inline hook is hosted on Render, the contents of `registrationHooks.js` is copied and opened here so we can walk through it.\n\n`registrationHooks.js` defines a route with the endpoint `/domain`. The anonymous function in this route gets called when the application receives a `POST` request to `https://okta-hooks.onrender.com/okta/hooks/registration/domain`\n\nThis is the URL Okta will need to call to via the inline hook during self-service registration.   ",
       "line": 26
     },
     {
@@ -27,7 +27,7 @@
           "character": 7
         }
       },
-      "description": "## Examine `registrationHooks.js` - Payload Validation\n\nWhen our application on Glitch receives a `POST` request to `domain`, the request data is validated. We check if there is a JSON object named `data` and if that object has a `userProfile` object. The `data.userProfile` object appears in SSR requests from Okta.\n\nIf `data` or `data.userProfile` are null, the application returns a response that tells Okta to `DENY` registration. Let's take a closer look at how that response is formed."
+      "description": "## Examine `registrationHooks.js` - Payload Validation\n\nWhen our application on Render receives a `POST` request to `domain`, the request data is validated. We check if there is a JSON object named `data` and if that object has a `userProfile` object. The `data.userProfile` object appears in SSR requests from Okta.\n\nIf `data` or `data.userProfile` are null, the application returns a response that tells Okta to `DENY` registration. Let's take a closer look at how that response is formed."
     },
     {
       "file": "glitch/registrationHooks.js",
@@ -87,7 +87,7 @@
     },
     {
       "title": "Create the Registration Inline Hook",
-      "description": "\n## Create the Registration Inline Hook\n\n1. Ensure you are signed in to the Okta Admin dashboard as your Super Admin account, `oktatraining`.\n\n2. In the Admin menu, select `Workflow` > `Inline Hooks`\n\n3. Click  `Add Inline Hook` and select `Registration` from the drop down menu.\n\n4. For `Name`, enter `Email Domain Registration Hook`\n\n5. For `URL`, enter `https://es-okta-hooks.glitch.me/okta/hooks/registration/domain`\n\n6. For `Authentication field`, enter `x-api-key`\n\n7. For `Authentication secret`, enter `NOTUSED` (this is just a placeholder value for our class demonstration purposes)\n\n8. Click `Save`"
+      "description": "\n## Create the Registration Inline Hook\n\n1. Ensure you are signed in to the Okta Admin dashboard as your Super Admin account, `oktatraining`.\n\n2. In the Admin menu, select `Workflow` > `Inline Hooks`\n\n3. Click  `Add Inline Hook` and select `Registration` from the drop down menu.\n\n4. For `Name`, enter `Email Domain Registration Hook`\n\n5. For `URL`, enter `https://okta-hooks.onrender.com/okta/hooks/registration/domain`\n\n6. For `Authentication field`, enter `x-api-key`\n\n7. For `Authentication secret`, enter `NOTUSED` (this is just a placeholder value for our class demonstration purposes)\n\n8. Click `Save`"
     },
     {
       "title": "Enable the Registration Inline Hook",
@@ -107,7 +107,7 @@
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, you have created and enabled a Registration Inline Hook in a self-service registration Profile Enrollment Policy in Okta. This hook calls out to our custom Nodejs hosted on Glitch and determines whether or not a user can register for a customer application, depending on the value of their email address. Only users who register with  `allow.example.com` email addresses will be permitted to register for customer applications."
+      "description": "## ✅ Checkpoint\n\nAt this point, you have created and enabled a Registration Inline Hook in a self-service registration Profile Enrollment Policy in Okta. This hook calls out to our custom Nodejs hosted on Render and determines whether or not a user can register for a customer application, depending on the value of their email address. Only users who register with  `allow.example.com` email addresses will be permitted to register for customer applications."
     }
   ]
 }
