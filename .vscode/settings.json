@@ -1,4 +1,6 @@
+
 {
+  "comments.maxHeight": false,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": false,
     // Enable per-language
@@ -21,7 +23,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "never"
   },
-  "workbench.sideBar.location": "left",
+  "workbench.sideBar.location": "right",
   "codetour.promptForWorkspaceTours": false,
-  "codetour.showMarkers": false
+  "codetour.showMarkers": false,
+  "codetour.customTourDirectory": ".auth0/lab/guides"
 }

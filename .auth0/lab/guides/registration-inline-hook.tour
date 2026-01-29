@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#4 - Lab 5.4 Implement a Registration Inline Hook",
+  "title": "#4 - Implement a Registration Inline Hook",
   "steps": [
     {
       "title": "Lab Overview",
