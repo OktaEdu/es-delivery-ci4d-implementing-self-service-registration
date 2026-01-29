@@ -1,10 +1,10 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#5 - Lab 5.5 Implement a User Account Update Event Hook",
+  "title": "#6 - Lab 5.5 Implement a User Account Update Event Hook",
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Lab 5.5: Implement a User Account Update Event Hook\n\n🎯 Objective: Implement a User account update event hook\n\n🎬 **Scenario**  Okta Ice would like to forward user account update event information to their own external logging service.\n\n⏱️ Duration: 20 min\n\n⚠️ Prerequisites: Labs 1.4, 3.1, 5.1, 5.2, and 5.3"
+      "description": "## Lab 5.5: Implement a User Account Update Event Hook\n\n🎯 Objective: Implement a User account update event hook\n\n🎬 **Scenario**  Algen Scoop Shop would like to forward user account update event information to their own external logging service.\n\n⏱️ Duration: 20 min\n\n⚠️ Prerequisites: Labs 1.4, 3.1, 5.1, 5.2, and 5.3"
     },
     {
       "title": "Preparation and Background",

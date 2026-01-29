@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#3 - Configure the user profile policy and enable SSR",
+  "title": "#4 - Configure the user profile policy and enable SSR",
   "steps": [
     {
       "title": "Lab Overview",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Test self-service registration",
-      "description": ""
+      "description": "## Test self-service registration\n\nBefore following the directions below, that ensure you are **logged out** of any Okta sessions. **DO NOT use an Incognito browser window** for the steps that follow.\n\n1. Select [this link](command:codetour.sendTextToTerminal?[\" python3 -m http.server 8080\"]) to run the Customer Rewards app. Once the web server has started successfully, you will see the following message printed to the terminal: \n\n        `Serving HTTP on :: port 8080 (http://[::]:8080/) ...`\n\n\n\n1. Select **Make public** in the window that pops up at the bottom right of your Codespace environment.\n\n1. In this Codespace, select the **PORTS** tab. \n\n2. Hover over the **Forwarded Address** column and select the globe icon. This will launch your web app in a new browser tab.\n\n2. Select the **Rewards App (Redirect)** link. You should be redirected to the Okta Sign-in Widget.\n\n3. Select **Sign up** to view the sign-up form you set up.\n\n4. Optionally, complete the sign-up process with values of your choice. The invitation code won't matter since we have not set up validation with an external service yet. This user will automatically be added to the Customers group."
     },
     {
       "title": "Lab Checkpoint",

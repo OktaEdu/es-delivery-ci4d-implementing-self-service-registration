@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "#2 - Configure the user profile attributes with the Profile Editor",
+  "title": "#3 - Configure the user profile attributes with the Profile Editor",
   "steps": [
     {
       "title": "Lab Overview",

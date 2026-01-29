@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "#2 - Configure the authenticator enrollment Policy",
+  "steps": [
+    {
+      "title": "Lab Overview",
+      "description": "## Configure the authenticator enrollment policy\n\n 🎯 **Objective**    Configure a authenticator enrollment policy.\n\n  🎬 **Scenario**   Algen Scoop Shop is launching a new beta app and wants their customers to sign up and set a password. They allow want to allow them to enroll in MFA using Google Authenticator and/or phone."
+    },
+    {
+      "title": "Create an authenticator enrollment policy",
+      "description": "## Create an authenticator enrollment policy\n\n1. From the Okta Admin Dashboard, go to **Security** > **Authenticators**.\n\n2. On the Setup tab, use the **Add authenticator** button to add the following authenticators if you do not yet have them available:\n\n    - Password\n    - Google Authenticator\n    - Phone\n\n3. Go to the **Enrollment** tab. \n4. Select the **Add a policy** button.\n5. Name the policy **Customer policy**.\n6. Set **Assign to groups** to **Customers**. (Note: If you do not have this group, you need to complete the steps in the Prerequisites section of this lab).\n7. In the Authenticators section set the following authenticators:\n    - Password: **Required**\n    - Phone: **Optional**\n    - Google Authenticator: **Optional**\n    - All other authenticators should be marked as **Disabled**\n8. Select the **Create policy** button to save it."
+    },
+    {
+      "title": "Create an authenticator enrollment policy rule",
+      "description": "## Enable self-service registration in the profile enrollment policy\n\n1. You are now prompted to create a rule for your new profile enrollment policy. Name this **Customer policy rule**.\n\n1. In the User is accessing section, select **Specific applications** and enter **Customer Rewards**. Note: If you do not have this app, you need to complete the steps in the Prerequisites section of this lab.\n\n5. Scroll down and select **Create rule** to save this rule."
+    },
+    {
+      "title": "Lab Checkpoint",
+      "description": "## ✅ Checkpoint\n\nAt this point, you have configured an authenticator enrollment policy for group accessing an application."
+    }
+  ]
+}
