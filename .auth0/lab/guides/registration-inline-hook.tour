@@ -97,15 +97,25 @@
     },
     {
       "title": "Create the Registration Inline Hook",
-      "description": "\n## Create the Registration Inline Hook\n\n> Make sure you're logged into your Okta Admin dashboard as your Super Admin user.\n\n2. From the Okta Admin Dashboard, go to **Workflow** > **Inline Hooks**.\n\n3. Select **Add Inline Hook** and select **Registration** from the drop down menu.\n\n4. Enter the following values:\n    -  Name: **Invitation Code Validation**\n    - URL: `https://okta-hooks.onrender.com/okta/hooks/registration/invite`\n    - Authentication field: **x-api-key**\n    - Authentication secret: **NOTUSED** (this is just a placeholder value for our class demonstration purposes)\n\n5. Select **Save**."
+      "description": "\n## Create the Registration Inline Hook\n\n> Make sure you're logged into your Okta Admin dashboard as your Super Admin user.\n\n2. From the Okta Admin Dashboard, go to **Workflow** > **Inline Hooks**.\n\n3. Select **Add Inline Hook** and select **Registration** from the drop down menu.\n\n4. Enter the following values:\n    -  Name: **Invitation Code Validation**\n    - URL: `https://okta-hooks.onrender.com/okta/hooks/registration/invite`\n    - Authentication: Select **HTTP Headers**\n    - Authentication field: **x-api-key**\n    - Authentication secret: **NOTUSED** (this is just a placeholder value for our class demonstration purposes)\n\n5. Select **Save**."
     },
     {
-      "title": "Enable the Registration Inline Hook",
-      "description": "## Enable the Registration Inline Hook\n\n📝 **Note:** You can associate only one inline hook at a time with your Profile Enrollment policy.\n\n1. From the Admin menu, go to **Security** > **User Profile Policies**.\n\n2. Select the pencil icon next to **Customer Policy**.\n\n3. In the **Profile Enrollment** section, select **Edit**.\n\n4. In the Inline Hoo* section, select **Invitation Validation** from the drop down menu.\n\n5. Keep **When a new user is created** selected.\n\n5. Select **Save**.\n\n6. **Log out** of Okta."
+      "title": "Add the hook to the user profile policy",
+      "description": "## Add the hook to the user profile policy\n\n📝 **Note:** You can associate only one inline hook at a time with your Profile Enrollment policy.\n\n1. From the Admin menu, go to **Security** > **User Profile Policies**.\n\n2. Select the pencil icon next to **Customer Policy**.\n\n3. In the **Profile Enrollment** section, select **Edit**.\n\n4. In the Inline Hook section, select **Invitation Validation** from the drop down menu.\n\n5. Keep **When a new user is created** selected.\n\n5. Select **Save**.\n\n6. **Log out** of Okta.",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 4
+        },
+        "end": {
+          "line": 1,
+          "character": 43
+        }
+      }
     },
     {
       "title": "Test the Registration Inline Hook ",
-      "description": "## Test the Registration Inline Hook \n\n1. Visit Algen Scoop Shop's app. You can find the URL in the **PORTS** tab here in your Codespace environment.\n\n     >Note: If your Algen Scoop Shop Portal app is no longer running,  [select this link](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first. Remember to make it public.\n\n2. Select the **Rewards App (Redirect)**.\n\n### Allow case\n\n3. Select the **Sign up** link.\n\n4. Fill out the form and enter the valid Invitation Code: **934232**.\n\n5. You should be prompted to set up optional authenticators. You can skip this.\n\n6. Your account is created and you should land back at the Rewards app.\n\n### Deny case\n\n7. Log out of the Rewards app by selecting **Close Okta session**.\n8. Select the **Sign up** link again.\n9. This time, enter any other Invitation Code.\n10. Your registration request should be denied."
+      "description": "## Test the Registration Inline Hook \n\n1. Visit Algen Scoop Shop's app. You can find the URL in the **PORTS** tab here in your Codespace environment.\n\n     >Note: If your Algen Scoop Shop Portal app is no longer running,  [select this link](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first. Remember to make it public.\n\n2. Select the **Rewards App (Redirect)**.\n\n### Deny case\n\n2. Select the **Sign up** link.\n3. Fill out the form and enter an invalid Invitation Code like **123456**.\n4. When you submit the form, your registration request should be denied since the code is not valid.\n\n### Allow case\n\n5. This time, enter the valid Invitation Code: **934232**.\n\n6. You should be prompted to set up a password and optional authenticators. You can skip this.\n\n7. If you complete the sign up process, your account is created and you should land back at the Rewards app and your user should be assigned to the Customers group.\n\n"
     },
     {
       "title": "Lab Checkpoint",
