@@ -10,6 +10,15 @@ app.get("/", (req, res) => {
   const oktaUrl = process.env.BASE_OKTA_URL;
   const rewardsClientId = process.env.REWARDS_CLIENT_ID;
 
+  // 2. Render the 'index' view
+  res.render("index");
+});
+
+app.get("/redirect/rewards", (req, res) => {
+  // 1. Read secrets from the Codespace environment
+  const oktaUrl = process.env.BASE_OKTA_URL;
+  const rewardsClientId = process.env.REWARDS_CLIENT_ID;
+
   // 2. Render the 'rewards' view and pass the variables to it
   res.render("redirect/rewards", {
     oktaUrl: oktaUrl,
