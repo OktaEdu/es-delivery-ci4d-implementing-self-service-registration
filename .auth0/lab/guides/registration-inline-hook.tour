@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "\n## Lab 5.4 Customize Implement a Registration Inline Hook\n\n 🎯 **Objective**    Implement an Okta Inline Hook to customize the Profile Enrollment flow during Self-Service Registration.\n\n  🎬 **Scenario**     During their testing phase, Algen Scoop Shop would like to limit self-service registration to their customer applications to people with certain email domain names.\n\n  ⏱️ **Duration**    20 minutes\n\n⚠️ Prerequisites: Labs 1.4, 3.1, 5.1, 5.2, and 5.3"
+      "description": "\n## Implement a Registration Inline Hook\n\n 🎯 **Objective**    Implement a Registration Inline Hook to customize the Profile Enrollment flow during self-service registration.\n\n  🎬 **Scenario**     During their beta testing phase, Algen Scoop Shop would like to limit self-service registration to invited users who enter a valid invitation code. They have an external service that validates codes to determine if a user's registration request should be allowed or denied. We'll integrate this external service with a Registration Inline Hook and associate it with the user profile policy."
     },
     {
       "title": "Preparation and Background",
@@ -22,7 +22,7 @@
     },
     {
       "file": "glitch/registrationHooks.js",
-      "description": "## Examine `registrationHooks.js` - Routing\n\nWhile our custom code for the inline hook is hosted on Render, the contents of `registrationHooks.js` is copied and opened here so we can walk through it.\n\n`registrationHooks.js` defines a route with the endpoint `/domain`. The anonymous function in this route gets called when the application receives a `POST` request to `https://okta-hooks.onrender.com/okta/hooks/registration/domain`\n\nThis is the URL Okta will need to call to via the inline hook during self-service registration.   ",
+      "description": "## Examine `registrationHooks.js` - Routing\n\nWhile our custom code for the inline hook is hosted on Render, the contents of `registrationHooks.js` is copied and opened here so we can walk through it.\n\n`registrationHooks.js` defines a route with the endpoint `/invite`. The anonymous function in this route gets called when the application receives a `POST` request to `https://okta-hooks.onrender.com/okta/hooks/registration/invite`\n\nThis is the URL Okta will need to call to via the inline hook during self-service registration.   ",
       "line": 26
     },
     {
@@ -33,8 +33,8 @@
           "character": 3
         },
         "end": {
-          "line": 31,
-          "character": 7
+          "line": 30,
+          "character": 50
         }
       },
       "description": "## Examine `registrationHooks.js` - Payload Validation\n\nWhen our application on Render receives a `POST` request to `domain`, the request data is validated. We check if there is a JSON object named `data` and if that object has a `userProfile` object. The `data.userProfile` object appears in SSR requests from Okta.\n\nIf `data` or `data.userProfile` are null, the application returns a response that tells Okta to `DENY` registration. Let's take a closer look at how that response is formed."
@@ -43,8 +43,8 @@
       "file": "glitch/registrationHooks.js",
       "selection": {
         "start": {
-          "line": 32,
-          "character": 5
+          "line": 30,
+          "character": 1
         },
         "end": {
           "line": 48,
@@ -71,11 +71,11 @@
       "file": "glitch/registrationHooks.js",
       "selection": {
         "start": {
-          "line": 96,
-          "character": 13
+          "line": 88,
+          "character": 1
         },
         "end": {
-          "line": 109,
+          "line": 96,
           "character": 31
         }
       },
@@ -85,11 +85,11 @@
       "file": "glitch/registrationHooks.js",
       "selection": {
         "start": {
-          "line": 119,
+          "line": 107,
           "character": 5
         },
         "end": {
-          "line": 142,
+          "line": 115,
           "character": 4
         }
       },
@@ -105,19 +105,11 @@
     },
     {
       "title": "Test the Registration Inline Hook ",
-      "description": "## Test the Registration Inline Hook \n\n1. Visit the Algen Scoop Shop Portal.\n\n     ***If*** your Algen Scoop Shop Portal app is no longer running,  [select this link](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first.\n\n2. Click on **Rewards App (Redirect)**.\n\n3. Click the **Sign up** link.\n\nIn the next steps, we are going to test the following cases: a valid invitation code and an invalid invitation."
-    },
-    {
-      "title": "Test the Registration Inline Hook - Allow Case",
-      "description": "## Test the Registration Inline Hook - Allow Case\n\n1. In the `Email` field, enter an email address you can check so that it fits the `allow` case.\nFor example, if your email is `user@gmail.com`, you would enter **`user@allow.gmail.com`**\n\n2. For `Username`, enter `testuser`\n\n3. Click `Sign Up`\n\n4. You will now see that your registration is allowed! \n\n5. Instead of completing the process of setting up a password, select **Back to sign in**.\n"
-    },
-    {
-      "title": "Test the Registration Inline Hook - Default Deny Case",
-      "description": "## Test the Registration Inline Hook - Default Deny Case\n\nNow we'll test the default (deny) case, which should display a custom error in the Okta Sign-In widget\n\n1. Select the `Sign up` link\n\n5. In the `Email` field, enter your email address without any modifications.\n\n6. In the `Username` field, enter `iamerror`\n\n7. Click `Sign Up`\n\nYou will now see that your registration is denied with a custom error displayed in the Okta Sign-In widget:\n\n```\nInvalid email domain: gmail.com (message from inline hook)\n```"
+      "description": "## Test the Registration Inline Hook \n\n1. Visit Algen Scoop Shop's app. You can find the URL in the **PORTS** tab here in your Codespace environment.\n\n     >Note: If your Algen Scoop Shop Portal app is no longer running,  [select this link](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first. Remember to make it public.\n\n2. Select the **Rewards App (Redirect)**.\n\n### Allow case\n\n3. Select the **Sign up** link.\n\n4. Fill out the form and enter the valid Invitation Code: **934232**.\n\n5. You should be prompted to set up optional authenticators. You can skip this.\n\n6. Your account is created and you should land back at the Rewards app.\n\n### Deny case\n\n7. Log out of the Rewards app by selecting **Close Okta session**.\n8. Select the **Sign up** link again.\n9. This time, enter any other Invitation Code.\n10. Your registration request should be denied."
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, you have created and enabled a Registration Inline Hook in a self-service registration Profile Enrollment Policy in Okta. This hook calls out to our custom Nodejs hosted on Render and determines whether or not a user can register for a customer application, depending on the value of their email address. Only users who register with  `allow.example.com` email addresses will be permitted to register for customer applications."
+      "description": "## ✅ Checkpoint\n\nAt this point, you have created and enabled a Registration Inline Hook in a self-service registration Profile Enrollment Policy in Okta. This hook calls out to our custom Nodejs hosted on Render and determines whether or not a user can register for a customer application, depending on the validity of an invitation code."
     }
   ]
 }

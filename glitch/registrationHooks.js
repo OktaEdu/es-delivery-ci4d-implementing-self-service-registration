@@ -20,7 +20,7 @@ let body;
 
 /**
  *
- * Inline hook handler for registration with demoble scenarios determined by invite code
+ * Inline hook handler for registration decisions determined by invite code
  *
  **/
 router.post("/invite", function (req, res) {
@@ -85,7 +85,7 @@ router.post("/invite", function (req, res) {
   // *** DEMO *** depending on the validity of the invite code,
   // this API will perform different actions
   switch (invite_code) {
-    case "allow":
+    case "934232":
       commands = [
         {
           type: "com.okta.action.update",
