@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Configure the authenticator enrollment policy\n\n 🎯 **Objective**    Configure a authenticator enrollment policy.\n\n  🎬 **Scenario**   Algen Scoop Shop is launching a new beta app and wants their customers to sign up and set a password. They allow want to allow them to enroll in MFA using Google Authenticator and/or phone."
+      "description": "## Configure the authenticator enrollment policy\n\n 🎯 **Objective**    Configure a authenticator enrollment policy.\n\n  🎬 **Scenario**   Alglen Scoop Shop is launching a new beta app and wants their customers to sign up and set a password. They allow want to allow them to enroll in MFA using Google Authenticator and/or phone."
     },
     {
       "title": "Create an authenticator enrollment policy",

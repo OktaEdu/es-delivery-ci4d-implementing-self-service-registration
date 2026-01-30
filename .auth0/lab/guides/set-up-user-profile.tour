@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Lab Overview",
-      "description": "## Configure the user profile attributes with the Profile Editor\n\n 🎯 **Objective**    Add the additional attributes to the user profile so they can be added to the sign-up form.\n\n  🎬 **Scenario**     Algen Scoop Shop is opening launching a beta test of its new application. Users wil be required to enter an invitation code, which needs to be captured on the sign-up form. Before this field can be added to the sign-up form, it needs to be added as an attribute on the Okta user profile.\n\n  Since an invitation code is required to sign up, we'll make the attribute required. We'll also set the user permissions to Read-Write so that they can enter it into the sign-up form.\n"
+      "description": "## Configure the user profile attributes with the Profile Editor\n\n 🎯 **Objective**    Add the additional attributes to the user profile so they can be added to the sign-up form.\n\n  🎬 **Scenario**     Alglen Scoop Shop is opening launching a beta test of its new application. Users wil be required to enter an invitation code, which needs to be captured on the sign-up form. Before this field can be added to the sign-up form, it needs to be added as an attribute on the Okta user profile.\n\n  Since an invitation code is required to sign up, we'll make the attribute required. We'll also set the user permissions to Read-Write so that they can enter it into the sign-up form.\n"
     },
     {
       "title": "Add an additional required attribute",
@@ -12,7 +12,7 @@
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, you have updated the default User Profile and attribute permissions. Now you are ready to enable self-service registration for Algen Scoop Shop's new app!"
+      "description": "## ✅ Checkpoint\n\nAt this point, you have updated the default User Profile and attribute permissions. Now you are ready to enable self-service registration for Alglen Scoop Shop's new app!"
     }
   ]
 }
