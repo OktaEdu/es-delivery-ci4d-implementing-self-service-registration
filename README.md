@@ -1,6 +1,6 @@
 # Lab: Implement B2C Self-Service Registration with Okta
 
-In this [Okta Learning](https:/learning.okta.com) hands-on lab, you will implement a self-service registration experience for your B2C application. 
+In this [Okta Learning](https://learning.okta.com) hands-on lab, you will implement a self-service registration experience for your B2C application. 
 
 You will:
 
