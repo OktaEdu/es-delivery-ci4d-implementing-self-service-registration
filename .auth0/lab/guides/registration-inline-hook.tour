@@ -109,7 +109,7 @@
     },
     {
       "title": "Lab Checkpoint",
-      "description": "## ✅ Checkpoint\n\nAt this point, you have created and enabled a Registration Inline Hook in a self-service registration Profile Enrollment Policy in Okta. This hook calls out to our custom Nodejs hosted on Render and determines whether or not a user can register for a customer application, depending on the validity of an invitation code."
+      "description": "## ✅ Checkpoint\n\nAt this point, you have created and enabled a Registration Inline Hook in a self-service registration Profile Enrollment Policy in Okta. This hook calls out to our custom Nodejs hosted on Render and determines whether or not a user can register for a customer application, depending on the validity of an invitation code.\n\n### 🎉 End of Lab\n\nYou may close and [stop this Codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace#stopping-a-codespace)."
     }
   ]
 }
