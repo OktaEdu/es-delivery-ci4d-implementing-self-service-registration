@@ -8,7 +8,17 @@
     },
     {
       "title": "Preparation and Background",
-      "description": "## Preparation and Background\n\nThe Okta registration inline hook allows you to integrate your own custom code into Okta's Profile Enrollment flow. The hook is triggered after Okta receives the registration or profile update request. Your custom code can:\n\n- Allow or deny the registration attempt, based on your own validation of the information the user has submitted\n\n- Set or override the values that are populated in attributes of the user's Okta profile\n\nThis custom code must be accessible publicly on the Internet rather than our localhost. \n\nOur custom code that will handle the profile enrollment flow during self-service registration is a Nodejs app hosted on Render at: https://okta-hooks.onrender.com/"
+      "description": "## Preparation and Background\n\nThe Okta registration inline hook allows you to integrate your own custom code into Okta's Profile Enrollment flow. The hook is triggered after Okta receives the registration or profile update request. Your custom code can:\n\n- Allow or deny the registration attempt, based on your own validation of the information the user has submitted.\n\n- Set or override the values that are populated in attributes of the user's Okta profile.\n\nThis custom code must be accessible via the Internet.\n\nOur custom code that will handle the profile enrollment flow during self-service registration is a Nodejs app hosted on Render at: https://okta-hooks.onrender.com/",
+      "selection": {
+        "start": {
+          "line": 11,
+          "character": 132
+        },
+        "end": {
+          "line": 11,
+          "character": 164
+        }
+      }
     },
     {
       "file": "glitch/registrationHooks.js",
@@ -51,11 +61,11 @@
           "character": 1
         },
         "end": {
-          "line": 85,
-          "character": 5
+          "line": 76,
+          "character": 47
         }
       },
-      "description": "## Examine `registrationHooks.js` - Parse Email\n\nWhat happens if the payload our app receives is valid? We get the `email` from the `data.userProfile` object and parse out certain components of the email address to handle whether we will allow or deny the registration. This decision is handled by switch cases later on in the script.\n\n- `emailName`: Everything to the left of the `@` symbol in the email address\n\n- `emailDomain`: Everything to the right of the `@` symbol in the email address\n\n- `emailPrefix`: We'll use a predetermined prefix that we'll append to email addresses (e.g. `allow.gmail.com`) to demonstrate how we can limit registration to specific email domains.\n\n- `parsedEmail`: The complete email address without the `emailPrefix` so that we can still receive Okta activation emails when we register with an email like `user@allow.gmail.com` (the activation email will be sent to `user@gmail.com`)"
+      "description": "## Examine `registrationHooks.js` - Parse payload\n\nWhat happens if the payload our app receives is valid? We get the `invite_code` from the `data.userProfile` object so we can validate it and whether to allow or deny the registration. This decision is handled by switch cases later on in the script.\n"
     },
     {
       "file": "glitch/registrationHooks.js",
@@ -87,15 +97,15 @@
     },
     {
       "title": "Create the Registration Inline Hook",
-      "description": "\n## Create the Registration Inline Hook\n\n1. Ensure you are signed in to the Okta Admin dashboard as your Super Admin account, `oktatraining`.\n\n2. In the Admin menu, select `Workflow` > `Inline Hooks`\n\n3. Click  `Add Inline Hook` and select `Registration` from the drop down menu.\n\n4. For `Name`, enter `Email Domain Registration Hook`\n\n5. For `URL`, enter `https://okta-hooks.onrender.com/okta/hooks/registration/domain`\n\n6. For `Authentication field`, enter `x-api-key`\n\n7. For `Authentication secret`, enter `NOTUSED` (this is just a placeholder value for our class demonstration purposes)\n\n8. Click `Save`"
+      "description": "\n## Create the Registration Inline Hook\n\n> Make sure you're logged into your Okta Admin dashboard as your Super Admin user.\n\n2. From the Okta Admin Dashboard, go to **Workflow** > **Inline Hooks**.\n\n3. Select **Add Inline Hook** and select **Registration** from the drop down menu.\n\n4. Enter the following values:\n    -  Name: **Invitation Code Validation**\n    - URL: `https://okta-hooks.onrender.com/okta/hooks/registration/invite`\n    - Authentication field: **x-api-key**\n    - Authentication secret: **NOTUSED** (this is just a placeholder value for our class demonstration purposes)\n\n5. Select **Save**."
     },
     {
       "title": "Enable the Registration Inline Hook",
-      "description": "## Enable the Registration Inline Hook\n\n📝 **Note:** You can associate only one inline hook at a time with your Profile Enrollment policy.\n\n1. In the Admin menu, go to `Security` > `User Profile Policies`.\n\n2. Click the pencil icon next to `Customer Apps Enrollment Policy`\n\n3. In the **Profile Enrollment** section, click `Edit`\n\n4. In the **Inline Hook** section, select `Email Domain Registration Hook` from the drop down menu.\n\n5. Keep **When a new user is created** selected.\n\n5. Click **Save**.\n\n6. **Log out** of Okta."
+      "description": "## Enable the Registration Inline Hook\n\n📝 **Note:** You can associate only one inline hook at a time with your Profile Enrollment policy.\n\n1. From the Admin menu, go to **Security** > **User Profile Policies**.\n\n2. Select the pencil icon next to **Customer Policy**.\n\n3. In the **Profile Enrollment** section, select **Edit**.\n\n4. In the Inline Hoo* section, select **Invitation Validation** from the drop down menu.\n\n5. Keep **When a new user is created** selected.\n\n5. Select **Save**.\n\n6. **Log out** of Okta."
     },
     {
       "title": "Test the Registration Inline Hook ",
-      "description": "## Test the Registration Inline Hook \n\n1. Visit the Algen Scoop Shop Portal at http://localhost:8080 \n ***If*** your Algen Scoop Shop Portal app is no longer running,  [**click here**](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first.\n\n2. Click on `Rewards App (Redirect)`\n\n3. Click the `Sign up` link\n\nIn the next steps, we are going to test the following cases (where `example.com` is any domain):\n\n- **`allow.gmail.com`** - Registration will be allowed, and the response to Okta will include a debugContext message.\n\n- **any other domain** - The response to Okta will include a command to deny the registration, an error object that will be displayed in the Sign-In widget, and a debugContext message."
+      "description": "## Test the Registration Inline Hook \n\n1. Visit the Algen Scoop Shop Portal.\n\n     ***If*** your Algen Scoop Shop Portal app is no longer running,  [select this link](command:codetour.sendTextToTerminal?[\"python -m http.server 8080\"]) to to run it first.\n\n2. Click on **Rewards App (Redirect)**.\n\n3. Click the **Sign up** link.\n\nIn the next steps, we are going to test the following cases: a valid invitation code and an invalid invitation."
     },
     {
       "title": "Test the Registration Inline Hook - Allow Case",
